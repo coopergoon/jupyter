@@ -33,3 +33,15 @@ f4 = [11, 22, 33, 44, 55]
 q2 = pd.Series(data=a6, index=f4)
 print(q2)
 
+
+data = [
+    [1, 2, 3],
+    ["aaaa", 5, 6]
+]
+
+index = ['a', 'b']
+columns = ['c', 'd', 'e']
+p = pd.DataFrame(index=index, data=data, columns=columns)
+print(p)
+
+
