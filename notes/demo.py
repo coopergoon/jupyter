@@ -3,6 +3,7 @@
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import jieba
+from sklearn.preprocessing import MinMaxScaler
 
 def dict_vectorizer():
 	"""
@@ -117,6 +118,25 @@ def tfidf_vectorizer():
 	print(tf.inverse_transform([c1, c2]))
 
 
+def min_max():
+	"""
+	归一化处理
+	:return:
+	"""
+	# 二维数组
+	data = [
+		[100, 203, 45656],
+		[233, 203, 12344],
+		[100, 234, 5554],
+	]
+
+	mm = MinMaxScaler(feature_range=(3,4))
+
+	response = mm.fit_transform(data)
+	print(response)
+
+
+
 if __name__ == '__main__':
 	# dict_vectorizer()
 
@@ -124,6 +144,6 @@ if __name__ == '__main__':
 
 	# hanzi_vectorizer()
 
-	tfidf_vectorizer()
+	# tfidf_vectorizer()
 
-
+	min_max()
