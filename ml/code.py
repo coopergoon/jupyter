@@ -4,6 +4,10 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import jieba
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import Imputer
+import numpy as np
+
 
 def dict_vectorizer():
 	"""
@@ -136,6 +140,40 @@ def min_max():
 	print(response)
 
 
+def stand():
+	"""
+	标准化处理
+	:return:
+	"""
+	# 二维数组
+	data = [
+		[100, 203, 45656],
+		[233, 203, 12344],
+		[100, 234, 5554],
+	]
+
+	std = StandardScaler()
+
+	response = std.fit_transform(data)
+	print(response)
+
+
+def imputer():
+	"""
+	处理缺失值
+	:return:
+	"""
+
+	data = [
+		[100, 203, 45656],
+		[np.nan, 203, 12344],
+		[100, 234, 5554],
+	]
+	im = Imputer(missing_values='NaN', axis=0, strategy='mean')
+	response = im.fit_transform(data)
+	print(response)
+
+
 
 if __name__ == '__main__':
 	# dict_vectorizer()
@@ -146,4 +184,8 @@ if __name__ == '__main__':
 
 	# tfidf_vectorizer()
 
-	min_max()
+	# min_max()
+
+	# stand()
+
+	imputer()
