@@ -352,7 +352,7 @@ Process finished with exit code 0
 
 为什么会用到TfidfVectorizer？？
 
-答： 因为hi分类机器学习算法的重要依据 
+答： 因为分类机器学习算法的重要依据 
 
 
 
