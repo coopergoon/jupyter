@@ -1,4 +1,10 @@
-# jupyter  
-在某一目录下执行 jupyter notebook  启动 服务  
+# 目标  
+
+1. 机器学习入门  
+
+2. go语言入门  
+
+ 
+
  
 
