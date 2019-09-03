@@ -134,7 +134,7 @@ def min_max():
 		[100, 234, 5554],
 	]
 
-	mm = MinMaxScaler(feature_range=(3,4))
+	mm = MinMaxScaler(feature_range=(3, 4))
 
 	response = mm.fit_transform(data)
 	print(response)
